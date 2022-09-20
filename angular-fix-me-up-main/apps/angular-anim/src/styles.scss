@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'styles-font';
+
+// TODO: 1. the header (footer) needs to run flush to the top (bottom) and sides - This was occurred due to the body margin, done
+body {
+   margin: 0;
+}

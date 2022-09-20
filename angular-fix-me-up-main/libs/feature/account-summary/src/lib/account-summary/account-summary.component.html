@@ -1,0 +1,30 @@
+<h1>Account Summary</h1>
+<!-- TODO: 6. Angular ngFor, refactor, and bonus points - Done -->
+<!-- TODO: 7. Accessibility, table markup, form control - Added Formcontrol, changed filter approach and used ngFor -->
+<div class="account-summary">
+  <section>
+    <table class="form-group">
+      <tr>
+        <th scope="col">Account Name</th>
+        <th scope="col">Balance</th>
+        <th scope="col">
+          <form [formGroup]="formGroup">
+          <label>Account Type</label>
+          <select class="margin_right_50" formControlName="filter">
+            <option [ngValue]="null">None</option>
+            <option *ngFor="let cur of currencies" [ngValue]="cur.id">
+              {{ cur.value }}
+             </option>
+          </select>
+        </form>
+        </th>
+      </tr>
+      <tr *ngFor="let account of filteredAccounts$ | async">
+        <!-- TODO: 8. route to detail view - Done -->
+        <th><a [routerLink]="['/account', account.id]" [state]="account" >{{account.id}}</a></th>
+        <td>{{account.balance}}</td>
+        <td>{{account.currency}}</td>
+      </tr>
+    </table>
+  </section>
+</div>

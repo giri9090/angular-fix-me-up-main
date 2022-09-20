@@ -1,0 +1,36 @@
+// th[scope='col'] {
+//   border-bottom: 1px solid #333;
+// }
+
+// tr:nth-child(2n) {
+//   background-color: #DEDEDE;
+// }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.margin_right_50 {
+  margin-left: 50%;
+}
+
+select {
+  border: 1;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 10px;
+  *width: 350px;
+  *background: #58B14C;
+}

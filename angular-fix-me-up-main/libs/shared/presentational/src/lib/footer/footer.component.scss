@@ -1,0 +1,26 @@
+@use "theme";
+
+@mixin link() {
+  padding-left: 10px;
+}
+
+section {
+  height: 40px;
+  background: theme.$brand-bg-alt;
+  color: white;
+  padding-right: theme.$brand-padding;
+  padding-left: theme.$brand-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// TODO: 11. The Last Link is only suppose to be offset from the side of the screen
+// by 20px, what can we do to fix this. - Added a mixin link() and added a padding left of 10px
+.nav-offsite {
+  a {
+    // TODO: 12. something's off with this include - Done
+    @include link();
+    color: white;
+  }
+}
